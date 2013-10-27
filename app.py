@@ -28,7 +28,7 @@ def make_call():
     print call.sid
     return "Call made!"
 
-@app.route("/play")
+@app.route("/play", methods=['GET', 'POST'])
 def play():
     resp = twilio.twiml.Response()
     resp.say("I've been waiting for you.")
