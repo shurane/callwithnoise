@@ -23,7 +23,7 @@ mp3s = [ "http://audiour.com/iljqj2wh.mp3?download=1"
 def make_call():
     call = client.calls.create(to=config.to,  # Any phone number
                             from_=config.from_, # Must be a valid Twilio number
-                               url="http://localhost:5000/play")
+                               url=config.url)
                             #url="http://twimlets.com/holdmusic?Bucket=com.twilio.music.ambient")
     print call.sid
     return "Call made!"
